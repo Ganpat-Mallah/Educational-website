@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: JavaScript Essentials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="header-title">
+            <h1>JavaScript Essentials</h1>
+            <p>Master the basics of JavaScript with hands-on practice.</p>
+        </div>
+        <a href="webdev.html" class="back-to-course-button">Back to Course</a>
+    </div>
+</header>
+
+<!-- Accordion for Module 3 Topics -->
+<div class="accordion">
+    <button class="accordion-btn">Introduction to JavaScript</button>
+    <div class="accordion-content">
+        <p>JavaScript is a versatile programming language used to create interactive and dynamic websites. It is essential for modern web development.</p>
+    </div>
+
+    <button class="accordion-btn">Variables, Data Types, and Operators</button>
+    <div class="accordion-content">
+        <p>Learn about different types of variables in JavaScript, how to use operators to manipulate them, and how data types play a crucial role in the language.</p>
+    </div>
+
+    <button class="accordion-btn">Functions and Scope</button>
+    <div class="accordion-content">
+        <p>Understand the concept of functions in JavaScript, and learn about scope and closures, which are essential for writing efficient code.</p>
+    </div>
+
+    <button class="accordion-btn">DOM Manipulation and Events</button>
+    <div class="accordion-content">
+        <p>Learn how to manipulate the Document Object Model (DOM) to interact with HTML elements dynamically. Explore event handling in JavaScript to make your web pages interactive.</p>
+    </div>
+
+    <button class="accordion-btn">Basic Debugging and Error Handling</button>
+    <div class="accordion-content">
+        <p>Learn how to debug your JavaScript code using developer tools and handle errors efficiently with try-catch blocks and other error handling techniques.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Course Footer Content - © 2024</p>
+</footer>
+
+<script>
+    // JavaScript to handle accordion functionality
+    const accordionButtons = document.querySelectorAll(".accordion-btn");
+
+    accordionButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Toggle the active state of the clicked button
+            button.classList.toggle("active");
+
+            // Get the associated content div
+            const content = button.nextElementSibling;
+
+            // Toggle the visibility of the content
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+</script>
+<style>/* General Reset */
+    body, h1, h2, p, ul, li, a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Body Styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9; /* Light background for the entire page */
+        padding-top: 20px;
+    }
+    
+    /* Header Styling */
+    header {
+        background-color: green;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    
+    .header-title h1 {
+        margin: 0;
+        font-size: 1.8em;
+    }
+    
+    .header-title p {
+        margin: 5px 0 0;
+        font-size: 1em;
+        line-height: 1.4;
+    }
+    
+    /* Back to Course Button */
+    .back-to-course-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 5px 0;
+        transition: background-color 0.3s;
+    }
+    
+    .back-to-course-button:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Accordion Styling */
+    .accordion {
+        margin: 20px;
+        padding: 0 15px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+    
+    .accordion-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 15px;
+        text-align: left;
+        font-size: 1.2em;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-bottom: 5px;
+    }
+    
+    .accordion-btn:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Content section for accordion */
+    .accordion-content {
+        padding: 10px 20px;
+        background-color: #e9ecef;
+        display: none;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+    
+    /* Active state for accordion */
+    .accordion-btn.active {
+        background-color: #0056b3;
+    }
+    
+    /* Footer Styling */
+    footer {
+        background-color: green;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+    
+    footer p {
+        margin: 0;
+        font-size: 0.9em;
+    }
+    </style>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Course</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script>
+    <script>
+        // Initialize drag-and-drop functionality for horizontal movement
+        document.addEventListener('DOMContentLoaded', function() {
+            dragula([document.getElementById('modules-list')], {
+                direction: 'horizontal' // Set direction to horizontal
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Data Science Course</h1>
+            <nav>
+                <a href="index.html" class="back-link">← Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Course Description -->
+    <section class="course-description">
+        <p><h3>Learn the essential techniques and tools to master the field of Data Science.</h3> From Python programming to Machine Learning, this course will guide you through the most important topics in the Data Science industry.</p>
+    </section>
+
+    <section class="module-content">
+        <h2>Course Modules</h2>
+        <ul id="modules-list">
+            <!-- Existing Modules -->
+            <li id="module1">
+                <a href="ds-module1.html">Module 1: Introduction to Data Science</a>
+            </li>
+            <li id="module2">
+                <a href="ds-module2.html">Module 2: Python for Data Science</a>
+            </li>
+            <li id="module3">
+                <a href="ds-module3.html">Module 3: Data Preprocessing in Python</a>
+            </li>
+            <li id="module4">
+                <a href="ds-module4.html">Module 4: Machine Learning Basics</a>
+            </li>
+            <!-- New Modules -->
+            <li id="module5">
+                <a href="ds-module5.html">Module 5: Data Visualization</a>
+            </li>
+            <li id="module6">
+                <a href="ds-module6.html">Module 6: Statistical Analysis</a>
+            </li>
+            <li id="module7">
+                <a href="ds-module7.html">Module 7: Deep Learning Introduction</a>
+            </li>
+            <li id="module8">
+                <a href="ds-module8.html">Module 8: Natural Language Processing (NLP)</a>
+            </li>
+            <li id="module9">
+                <a href="ds-module9.html">Module 9: Big Data Analytics</a>
+            </li>
+            <li id="module10">
+                <a href="ds-module10.html">Module 10: Model Deployment</a>
+            </li>
+        </ul>
+    </section>
+    <style>
+/* Basic Styles for Course Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #28a745; /* Green color for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    top: 0; /* Top of the page */
+    z-index: 1000; /* Ensure header stays on top */
+}
+
+.container h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.course-description {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 80px; /* Margin to prevent overlap with fixed header */
+}
+
+.module-content {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+#modules-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    overflow-x: scroll; /* Allow horizontal scrolling */
+    gap: 10px; /* Space between modules */
+    margin: 0;
+}
+
+#modules-list li {
+    background-color: lightblue; /* Set background color to light blue */
+    color: black; /* Set text color to black */
+    padding: 15px;
+    border-radius: 8px;
+    cursor: move;
+    transition: background-color 0.3s;
+    min-width: 200px; /* Minimum width for each module */
+}
+
+#modules-list li:hover {
+    background-color: #87CEEB; /* Slightly darker light blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745; /* Green color for footer */
+    color: white;
+}
+
+/* Dragula specific styles for moving modules */
+.dragging {
+    opacity: 0.5;
+}
+
+ul#modules-list {
+    max-width: 100%;
+    margin: auto;
+}
+</style>
+    <footer>
+        <p>&copy; 2024 E-Learn Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

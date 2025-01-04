@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4: CSS Basics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="header-title">
+            <h1>CSS Basics</h1>
+            <p>Understand the core concepts of CSS to style beautiful and responsive websites.</p>
+        </div>
+        <a href="webdev.html" class="back-to-course-button">Back to Course</a>
+    </div>
+</header>
+
+<!-- Accordion for CSS Topics -->
+<div class="accordion">
+    <button class="accordion-btn">Introduction to CSS</button>
+    <div class="accordion-content">
+        <p>CSS is used to control the style and layout of web pages. It allows you to change colors, fonts, spacing, and positioning of elements.</p>
+    </div>
+
+    <button class="accordion-btn">CSS Syntax and Selectors</button>
+    <div class="accordion-content">
+        <p>Learn the basic syntax of CSS, how to use selectors to target HTML elements, and how to apply styles to them.</p>
+    </div>
+
+    <button class="accordion-btn">Box Model in CSS</button>
+    <div class="accordion-content">
+        <p>The CSS box model is a fundamental concept. It includes margins, borders, padding, and the content area.</p>
+    </div>
+
+    <button class="accordion-btn">Positioning in CSS</button>
+    <div class="accordion-content">
+        <p>CSS allows you to position elements using different methods like static, relative, absolute, and fixed positioning.</p>
+    </div>
+
+    <button class="accordion-btn">Flexbox Layout</button>
+    <div class="accordion-content">
+        <p>Flexbox is a powerful layout tool in CSS that helps create responsive layouts with ease by aligning and distributing space among elements.</p>
+    </div>
+
+    <button class="accordion-btn">CSS Grid</button>
+    <div class="accordion-content">
+        <p>CSS Grid is another layout system that allows you to create complex two-dimensional layouts with rows and columns.</p>
+    </div>
+
+    <button class="accordion-btn">Responsive Design with Media Queries</button>
+    <div class="accordion-content">
+        <p>Learn how to make your website responsive by using media queries, allowing it to adapt to different screen sizes.</p>
+    </div>
+
+    <button class="accordion-btn">CSS Transitions and Animations</button>
+    <div class="accordion-content">
+        <p>Enhance user experience by adding transitions and animations to elements, making your website feel more interactive.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Course Footer Content - © 2024</p>
+</footer>
+
+<script>
+    // JavaScript to handle accordion functionality
+    const accordionButtons = document.querySelectorAll(".accordion-btn");
+
+    accordionButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Toggle the active state of the clicked button
+            button.classList.toggle("active");
+
+            // Get the associated content div
+            const content = button.nextElementSibling;
+
+            // Toggle the visibility of the content
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+</script>
+<style>/* General Reset */
+    body, h1, h2, p, ul, li, a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Body Styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        padding-top: 20px;
+    }
+    
+    /* Header Styling */
+    header {
+        background-color: green;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    
+    .header-title h1 {
+        margin: 0;
+        font-size: 1.8em;
+    }
+    
+    .header-title p {
+        margin: 5px 0 0;
+        font-size: 1em;
+        line-height: 1.4;
+    }
+    
+    /* Back to Course Button */
+    .back-to-course-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 5px 0;
+        transition: background-color 0.3s;
+    }
+    
+    .back-to-course-button:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Accordion Styling */
+    .accordion {
+        margin: 20px;
+        padding: 0 15px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+    
+    .accordion-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 15px;
+        text-align: left;
+        font-size: 1.2em;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-bottom: 5px;
+    }
+    
+    .accordion-btn:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Content section for accordion */
+    .accordion-content {
+        padding: 10px 20px;
+        background-color: #e9ecef;
+        display: none;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+    
+    /* Active state for accordion */
+    .accordion-btn.active {
+        background-color: #0056b3;
+    }
+    
+    /* Footer Styling */
+    footer {
+        background-color: green;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+    
+    footer p {
+        margin: 0;
+        font-size: 0.9em;
+    }
+    </style>
+</body>
+</html>

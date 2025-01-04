@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4: Machine Learning Basics</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleContent(topicId) {
+            const content = document.getElementById(topicId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Module 4: Machine Learning Basics</h1>
+            <nav>
+                <a href="datasci.html" class="back-link">← Back to Course</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="module-content">
+        <h2>Topics Covered</h2>
+        <ul>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleContent('topic1')">What is Machine Learning?</a>
+                <div id="topic1" class="topic-content" style="display: none;">
+                    <p>Machine Learning is a subset of Artificial Intelligence where machines learn from data to make predictions:</p>
+                    <ul>
+                        <li>Supervised Learning: Learning from labeled data</li>
+                        <li>Unsupervised Learning: Learning from unlabeled data</li>
+                        <li>Reinforcement Learning: Learning by interacting with the environment</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleContent('topic2')">Types of Machine Learning Algorithms</a>
+                <div id="topic2" class="topic-content" style="display: none;">
+                    <p>Common machine learning algorithms include:</p>
+                    <ul>
+                        <li>Linear Regression</li>
+                        <li>Decision Trees</li>
+                        <li>Support Vector Machines</li>
+                        <li>K-Nearest Neighbors</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleContent('topic3')">Model Evaluation</a>
+                <div id="topic3" class="topic-content" style="display: none;">
+                    <p>Model evaluation metrics help assess the performance of a machine learning model:</p>
+                    <ul>
+                        <li>Accuracy, Precision, Recall</li>
+                        <li>Confusion Matrix</li>
+                        <li>Cross-validation</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <style>
+        /* Styles for Topic Container */
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 20px; /* Add space between topics */
+}
+
+/* Topic Box Styling */
+ul li a {
+    display: block;
+    background: #0077cc; /* Box background color */
+    color: #fff; /* Text color */
+    font-size: 1.2em; /* Font size */
+    padding: 15px 20px; /* Inner padding for the box */
+    text-decoration: none; /* Remove underline */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Hover Effect for Topic Box */
+ul li a:hover {
+    background: #005fa3; /* Darker shade on hover */
+    transform: scale(1.03); /* Slight zoom effect */
+}
+
+/* Topic Content Styling */
+.topic-content {
+    background: #f9f9f9; /* Light background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Match the box corners */
+    margin-top: 10px;
+    padding: 15px 20px; /* Inner padding */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: none; /* Default hidden */
+    font-size: 1em;
+    color: #555; /* Text color */
+    animation: slideDown 0.3s ease; /* Smooth animation */
+}
+
+/* Slide-Down Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* List Inside Content */
+.topic-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style: circle;
+}
+
+.topic-content ul li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+    </style>
+    <footer>
+        <p>&copy; 2024 E-Learn Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Introduction to HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript to toggle the visibility of the content on clicking the topic
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Module 1: Introduction to HTML</h1>
+            <nav>
+                <a href="webdev.html" class="back-link">← Back to Course</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Module Description -->
+    <section class="module-description">
+        <p>Learn the fundamentals of HTML and how to structure web pages using basic tags and attributes. This module will cover how to create a simple webpage and add text, images, and links.</p>
+    </section>
+
+    <!-- Topics Covered -->
+    <section class="topics-covered">
+        <h2>Topics Covered in this Module</h2>
+        <ul>
+            <li onclick="toggleContent('content1')">What is HTML?</li>
+            <div id="content1" style="display:none;">
+                <p>HTML stands for HyperText Markup Language and is used to structure content on the web. It is the backbone of most web pages and provides the basic structure for text, images, links, etc.</p>
+            </div>
+
+            <li onclick="toggleContent('content2')">Basic HTML Tags</li>
+            <div id="content2" style="display:none;">
+                <p>HTML tags are the building blocks of a webpage. Tags like &lt;h1&gt;, &lt;p&gt;, and &lt;a&gt; define headings, paragraphs, and links respectively. HTML tags generally come in pairs, such as &lt;tag&gt; content &lt;/tag&gt;.</p>
+            </div>
+
+            <li onclick="toggleContent('content3')">HTML Structure</li>
+            <div id="content3" style="display:none;">
+                <p>A typical HTML document has a structure consisting of a &lt;head&gt; section (for metadata like title and styles) and a &lt;body&gt; section (for the visible content of the page).</p>
+            </div>
+
+            <li onclick="toggleContent('content4')">Adding Images and Links</li>
+            <div id="content4" style="display:none;">
+                <p>Images are added using the &lt;img&gt; tag, while links are created using the &lt;a&gt; tag. Both tags have attributes such as &lt;img src="image.jpg"&gt; and &lt;a href="https://example.com"&gt;Link&lt;/a&gt;.</p>
+            </div>
+
+            <li onclick="toggleContent('content5')">HTML Forms</li>
+            <div id="content5" style="display:none;">
+                <p>Forms are used to collect user input. The &lt;form&gt; tag encompasses all form elements such as text fields, checkboxes, and submit buttons. Example: &lt;form&gt;&lt;input type="text"&gt;&lt;/form&gt;.</p>
+            </div>
+
+            <!-- New Topics Added -->
+            <li onclick="toggleContent('content6')">Text Formatting in HTML</li>
+            <div id="content6" style="display:none;">
+                <p>HTML allows you to format text using tags like &lt;b&gt; (bold), &lt;i&gt; (italic), &lt;u&gt; (underline), &lt;em&gt; (emphasized), and &lt;strong&gt; (strong emphasis).</p>
+            </div>
+
+            <li onclick="toggleContent('content7')">Lists in HTML</li>
+            <div id="content7" style="display:none;">
+                <p>Lists are used to group related items together. HTML offers two types of lists: ordered lists (using the &lt;ol&gt; tag) and unordered lists (using the &lt;ul&gt; tag).</p>
+            </div>
+
+            <li onclick="toggleContent('content8')">Tables in HTML</li>
+            <div id="content8" style="display:none;">
+                <p>HTML tables are used to display data in rows and columns. The &lt;table&gt; tag is used to create a table, and within it, you use &lt;tr&gt; for rows, &lt;td&gt; for data cells, and &lt;th&gt; for header cells.</p>
+            </div>
+
+            <li onclick="toggleContent('content9')">HTML Comments</li>
+            <div id="content9" style="display:none;">
+                <p>HTML comments are used to add notes within the code. They are not displayed in the browser. Use &lt;!-- comment text --&gt; to write a comment.</p>
+            </div>
+        </ul>
+    </section>
+    <style>/* Basic Styles for Course Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #28a745; /* Green color for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    top: 0; /* Top of the page */
+    z-index: 1000; /* Ensure header stays on top */
+}
+
+.container h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.module-description {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 80px; /* Margin to prevent overlap with fixed header */
+}
+
+.topics-covered {
+    padding: 20px;
+}
+
+.topics-covered ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topics-covered ul li {
+    background-color: #add8e6; /* Light blue background */
+    color: black;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.topics-covered ul li:hover {
+    background-color: #87cefa; /* Darker light blue on hover */
+}
+
+.topics-covered ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.topics-covered ul li a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #0077cc;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745; /* Green color for footer */
+    color: white;
+}
+
+        </style>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E-Learn Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

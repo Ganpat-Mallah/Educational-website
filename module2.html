@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: HTML Forms and Advanced HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript to toggle the visibility of the content on clicking the topic
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Module 2: HTML Forms and Advanced HTML</h1>
+            <nav>
+                <a href="webdev.html" class="back-link">← Back to Course</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Module Description -->
+    <section class="module-description">
+        <p>Learn how to create forms in HTML and explore some of the advanced HTML elements such as multimedia, iframes, and semantic HTML tags to build complex, user-friendly websites.</p>
+    </section>
+
+    <!-- Topics Covered -->
+    <section class="topics-covered">
+        <h2>Topics Covered in this Module</h2>
+        <ul>
+            <li onclick="toggleContent('content1')">Introduction to HTML Forms</li>
+            <div id="content1" style="display:none;">
+                <p>HTML forms are used to collect input from users. The &lt;form&gt; tag is used to define a form. Inside the form, various input elements like text fields, radio buttons, and checkboxes are used to gather data.</p>
+            </div>
+
+            <li onclick="toggleContent('content2')">Form Elements: Input, Textarea, Select</li>
+            <div id="content2" style="display:none;">
+                <p>Input elements are the building blocks of forms. The &lt;input&gt; tag can be used for text fields, checkboxes, radio buttons, and other types of inputs. The &lt;textarea&gt; tag allows for multi-line input, and the &lt;select&gt; tag is used for drop-down menus.</p>
+            </div>
+
+            <li onclick="toggleContent('content3')">Form Validation in HTML</li>
+            <div id="content3" style="display:none;">
+                <p>HTML5 provides form validation using attributes like required, pattern, min, max, etc. These attributes help ensure that the user enters the correct data before submitting the form.</p>
+            </div>
+
+            <li onclick="toggleContent('content4')">Semantic HTML Tags</li>
+            <div id="content4" style="display:none;">
+                <p>Semantic HTML tags are those that clearly describe their meaning in a human- and machine-readable way. Examples include &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, and &lt;nav&gt;.</p>
+            </div>
+
+            <li onclick="toggleContent('content5')">Embedding Audio and Video in HTML</li>
+            <div id="content5" style="display:none;">
+                <p>HTML allows embedding multimedia content such as audio and video using the &lt;audio&gt; and &lt;video&gt; tags. You can add controls, like play and pause buttons, using the 'controls' attribute.</p>
+            </div>
+
+            <li onclick="toggleContent('content6')">HTML5 APIs</li>
+            <div id="content6" style="display:none;">
+                <p>HTML5 introduced a number of APIs such as LocalStorage, Geolocation, and WebSockets. These APIs allow you to create more interactive and dynamic web applications.</p>
+            </div>
+
+            <li onclick="toggleContent('content7')">HTML Iframes</li>
+            <div id="content7" style="display:none;">
+                <p>An iframe is used to embed another HTML document within the current page. It is created using the &lt;iframe&gt; tag. You can also set its width, height, and frameborder attributes.</p>
+            </div>
+
+            <li onclick="toggleContent('content8')">HTML Media Queries</li>
+            <div id="content8" style="display:none;">
+                <p>Media queries are used to apply different styles based on the device's screen size. This helps in creating responsive web designs that look good on all screen sizes.</p>
+            </div>
+
+            <li onclick="toggleContent('content9')">HTML Tables and Forms Integration</li>
+            <div id="content9" style="display:none;">
+                <p>Tables are used to display data in rows and columns. HTML forms can be integrated with tables to create user-friendly data-entry forms.</p>
+            </div>
+
+            <li onclick="toggleContent('content10')">HTML Accessibility</li>
+            <div id="content10" style="display:none;">
+                <p>HTML accessibility refers to designing web pages that are usable by all, including people with disabilities. This can be achieved by adding proper alt text for images, using appropriate headings, and ensuring keyboard navigation.</p>
+            </div>
+
+            <!-- New Topics Added -->
+            <li onclick="toggleContent('content11')">Working with HTML Events</li>
+            <div id="content11" style="display:none;">
+                <p>HTML events are actions that can trigger JavaScript functions. Examples include mouse clicks, form submissions, and keyboard presses. The &lt;button&gt; tag can be used to create interactive elements that respond to these events.</p>
+            </div>
+
+            <li onclick="toggleContent('content12')">HTML Meta Tags</li>
+            <div id="content12" style="display:none;">
+                <p>Meta tags provide metadata about the HTML document, such as character encoding, author, and viewport settings. They are placed within the &lt;head&gt; section of the document.</p>
+            </div>
+
+            <li onclick="toggleContent('content13')">HTML Forms and Data Submission</li>
+            <div id="content13" style="display:none;">
+                <p>Forms are used to collect data from users. Once the user submits the form, the data can be sent to a server using GET or POST methods. The form action attribute defines the URL where the data is sent.</p>
+            </div>
+
+            <li onclick="toggleContent('content14')">HTML Templates</li>
+            <div id="content14" style="display:none;">
+                <p>The &lt;template&gt; tag is used to declare HTML content that is not rendered when the page loads but can be activated later using JavaScript. This is useful for creating reusable content.</p>
+            </div>
+
+            <li onclick="toggleContent('content15')">HTML Forms with CSS</li>
+            <div id="content15" style="display:none;">
+                <p>HTML forms can be styled with CSS to enhance the user experience. You can change the appearance of text fields, buttons, and other form elements to match your website's design.</p>
+            </div>
+
+            <li onclick="toggleContent('content16')">HTML Canvas Element</li>
+            <div id="content16" style="display:none;">
+                <p>The &lt;canvas&gt; element is used to draw graphics via JavaScript. This allows you to create dynamic images, games, and animations directly within your HTML.</p>
+            </div>
+        </ul>
+    </section>
+    <style>
+/* Basic Styles for Course Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #28a745; /* Green color for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    top: 0; /* Top of the page */
+    z-index: 1000; /* Ensure header stays on top */
+}
+
+.container h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.module-description {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 80px; /* Margin to prevent overlap with fixed header */
+}
+
+.topics-covered {
+    padding: 20px;
+}
+
+.topics-covered ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topics-covered ul li {
+    background-color: #add8e6; /* Light blue background */
+    color: black;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.topics-covered ul li:hover {
+    background-color: #87cefa; /* Darker light blue on hover */
+}
+
+.topics-covered ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.topics-covered ul li a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #0077cc;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745; /* Green color for footer */
+    color: white;
+}
+
+
+
+    </style>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E-Learn Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

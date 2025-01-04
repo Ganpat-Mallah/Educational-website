@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: Python for Data Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleContent(topicId) {
+            const content = document.getElementById(topicId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Module 2: Python for Data Analysis</h1>
+            <nav>
+                <a href="datasci.html" class="back-link">← Back to Course</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="module-content">
+        <h2>Topics Covered</h2>
+        <ul>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleContent('topic1')">Introduction to Python</a>
+                <div id="topic1" class="topic-content" style="display: none;">
+                    <p>Python is a versatile and beginner-friendly programming language widely used in Data Science. Key features include:</p>
+                    <ul>
+                        <li>Simple syntax</li>
+                        <li>Extensive libraries like NumPy, Pandas, and Matplotlib</li>
+                        <li>Large community support</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleContent('topic2')">Pandas: DataFrames and Series</a>
+                <div id="topic2" class="topic-content" style="display: none;">
+                    <p>Pandas is a powerful library for data manipulation. Key concepts include:</p>
+                    <ul>
+                        <li>DataFrames: Tabular data structures</li>
+                        <li>Series: One-dimensional labeled arrays</li>
+                        <li>Operations like merging, grouping, and filtering</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleContent('topic3')">NumPy for Numerical Computations</a>
+                <div id="topic3" class="topic-content" style="display: none;">
+                    <p>NumPy is essential for numerical computations in Python. Key features include:</p>
+                    <ul>
+                        <li>Efficient array operations</li>
+                        <li>Mathematical functions like trigonometry and linear algebra</li>
+                        <li>Random number generation</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleContent('topic4')">Data Visualization with Matplotlib and Seaborn</a>
+                <div id="topic4" class="topic-content" style="display: none;">
+                    <p>Data visualization libraries like Matplotlib and Seaborn help in creating beautiful plots:</p>
+                    <ul>
+                        <li>Matplotlib: Low-level plotting library</li>
+                        <li>Seaborn: High-level interface for statistical graphics</li>
+                        <li>Common charts: Line plots, bar charts, and histograms</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <style>/* Styles for Topic Container */
+        ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+        }
+        
+        ul li {
+            margin-bottom: 20px; /* Add space between topics */
+        }
+        
+        /* Topic Box Styling */
+        ul li a {
+            display: block;
+            background: #0077cc; /* Box background color */
+            color: #fff; /* Text color */
+            font-size: 1.2em; /* Font size */
+            padding: 15px 20px; /* Inner padding for the box */
+            text-decoration: none; /* Remove underline */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+        
+        /* Hover Effect for Topic Box */
+        ul li a:hover {
+            background: #005fa3; /* Darker shade on hover */
+            transform: scale(1.03); /* Slight zoom effect */
+        }
+        
+        /* Topic Content Styling */
+        .topic-content {
+            background: #f9f9f9; /* Light background */
+            border: 1px solid #ddd; /* Light border */
+            border-radius: 8px; /* Match the box corners */
+            margin-top: 10px;
+            padding: 15px 20px; /* Inner padding */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            display: none; /* Default hidden */
+            font-size: 1em;
+            color: #555; /* Text color */
+            animation: slideDown 0.3s ease; /* Smooth animation */
+        }
+        
+        /* Slide-Down Animation */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* List Inside Content */
+        .topic-content ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            list-style: circle;
+        }
+        
+        .topic-content ul li {
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        </style>
+    <footer>
+        <p>&copy; 2024 E-Learn Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
